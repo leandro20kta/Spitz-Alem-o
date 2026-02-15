@@ -1,7 +1,7 @@
 <!-- HERO SECTION COMPLETA - SUBSTITUIR NO INDEX.HTML -->
 <section class="hero-3d" id="hero">
     <style>
-        /* ESTILOS DESKTOP (PADRÃO) - MANTIDOS */
+        /* ESTILOS DESKTOP (PADRÃO) */
         .hero-3d {
             min-height: 100vh;
             display: flex;
@@ -267,171 +267,47 @@
             50% { transform: translateY(-15px) rotate(2deg); }
         }
 
-        /* ============================================ */
-        /* MOBILE OTIMIZADO - VERSÃO PROFISSIONAL */
-        /* ============================================ */
+        /* ===== MOBILE FIX HERO ===== */
         @media (max-width: 768px) {
-            .hero-3d {
-                min-height: auto;
-                padding: 30px 20px 50px;
-                background: #0a0a0a; /* Fundo limpo sem efeitos */
-            }
 
-            .hero-3d::before {
-                display: none; /* Remove efeitos de fundo poluentes */
-            }
+          .hero-container {
+            grid-template-columns: 1fr !important;
+            text-align: center !important;
+            gap: 30px !important;
+          }
 
-            .hero-container {
-                grid-template-columns: 1fr; /* Coluna única */
-                gap: 25px;
-                text-align: center;
-            }
+          .hero-visual {
+            order: -1;
+          }
 
-            /* ORDEM: Imagem primeiro, depois texto */
-            .hero-visual {
-                order: -1;
-                margin-bottom: 10px;
-            }
+          .hero-title {
+            font-size: 2em !important;
+            line-height: 1.2 !important;
+          }
 
-            .hero-image-main {
-                max-width: 85%;
-                width: 100%;
-                border-radius: 20px;
-                border: 3px solid #D4AF37;
-                box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-                margin: 0 auto;
-                display: block;
-            }
+          .hero-subtitle {
+            max-width: 100% !important;
+            font-size: 1em !important;
+          }
 
-            .hero-image-main:hover {
-                transform: none; /* Remove hover no mobile */
-            }
+          .hero-image-main {
+            max-width: 85% !important;
+            margin: 0 auto !important;
+            display: block;
+          }
 
-            .hero-content {
-                gap: 20px;
-                align-items: center; /* Centraliza tudo */
-            }
+          .hero-btn {
+            width: 100% !important;
+            font-size: 1.1em !important;
+            padding: 18px 20px !important;
+          }
 
-            .hero-badge {
-                font-size: 13px;
-                padding: 10px 20px;
-                margin: 0 auto;
-                order: -1; /* Badge no topo */
-                background: rgba(255, 92, 92, 0.12);
-                border: 1px solid rgba(255, 92, 92, 0.3);
-            }
+          .hero-badge {
+            font-size: 12px !important;
+            padding: 6px 14px !important;
+            margin: 0 auto !important;
+          }
 
-            .hero-title {
-                font-size: 2em; /* Título proporcional */
-                line-height: 1.2;
-                text-align: center;
-            }
-
-            .hero-title .highlight {
-                margin-top: 5px;
-                font-size: 0.95em;
-            }
-
-            .hero-subtitle {
-                font-size: 1.05em;
-                line-height: 1.6;
-                max-width: 100%;
-                text-align: center;
-                color: #c0c0c0;
-            }
-
-            .hero-authority {
-                font-size: 0.85em;
-                justify-content: center;
-                margin-top: 0;
-                color: #777;
-            }
-
-            .hero-benefits {
-                gap: 10px;
-                margin: 15px 0;
-                align-items: center;
-            }
-
-            .hero-benefit-item {
-                justify-content: center;
-                font-size: 0.95em;
-                text-align: center;
-                gap: 8px;
-            }
-
-            .hero-benefit-icon {
-                font-size: 1.1em;
-            }
-
-            /* Botão mobile premium */
-            .hero-cta-container {
-                width: 100%;
-                margin-top: 25px;
-                gap: 15px;
-            }
-
-            .hero-btn {
-                width: 100%;
-                padding: 20px 24px;
-                font-size: 1.15em;
-                font-weight: 800;
-                border-radius: 14px;
-                background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%);
-                box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
-                letter-spacing: 0.5px;
-            }
-
-            .hero-btn::after {
-                margin-left: 8px;
-            }
-
-            .hero-guarantee {
-                justify-content: center;
-                font-size: 0.85em;
-                margin-top: 5px;
-            }
-
-            /* Remove cards flutuantes no mobile */
-            .hero-floating-cards {
-                display: none;
-            }
-        }
-
-        /* ============================================ */
-        /* MOBILE EXTRA PEQUENO (max-width: 480px) */
-        /* ============================================ */
-        @media (max-width: 480px) {
-            .hero-3d {
-                padding: 25px 16px 40px;
-            }
-
-            .hero-title {
-                font-size: 1.8em;
-            }
-
-            .hero-image-main {
-                max-width: 90%;
-                border-radius: 16px;
-            }
-
-            .hero-badge {
-                font-size: 12px;
-                padding: 8px 16px;
-            }
-
-            .hero-subtitle {
-                font-size: 1em;
-            }
-
-            .hero-btn {
-                padding: 18px 20px;
-                font-size: 1.1em;
-            }
-
-            .hero-benefit-item {
-                font-size: 0.9em;
-            }
         }
     </style>
 
@@ -471,13 +347,9 @@
             </div>
 
             <div class="hero-cta-container">
-                <a href="https://kiwify.app/rhSa6S3" 
-   class="hero-btn" 
-   target="_blank" 
-   rel="noopener">
-    Proteger meu Spitz agora
-</a>
-
+                <a href="https://pay.kiwify.com.br/FIqoY2q" class="hero-btn">
+                    Proteger meu Spitz agora
+                </a>
                 <div class="hero-guarantee">
                     <span class="hero-guarantee-icon">🛡️</span>
                     <span>Garantia de 7 dias ou seu dinheiro de volta</span>
